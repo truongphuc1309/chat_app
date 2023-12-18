@@ -1,5 +1,4 @@
 @import "../../index.scss";
-
 .navbar{
     position: fixed;
     left: 0;
@@ -32,6 +31,20 @@
 
         .navbar-title{
             display: none;
+        }
+
+        .logout{
+            height: 56px;
+            width: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #345994;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .logout:hover{
+            opacity: 0.8;
         }
     }
 
@@ -278,5 +291,56 @@
             background-color: rgb(245, 34, 45) !important;
             color: $white-color !important;
         }
+
+        .ce-autocomplete-close{
+            font-size: 1.6rem;
+            top: 9px !important;
+            right: 18px !important;
+        }
     }
 }
+
+.ce-mobile-chat-list-button,
+.ce-mobile-chat-settings-button{
+    top: 84px !important;
+    font-size: 2.8rem !important;
+    color: $white-color !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+@media (max-width: 575px){
+    #root {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 60px;
+
+        .logout{
+            height: 50px;
+            width: 50px;
+        }
+
+        .usr-avt{
+            height: 50px;
+            width: 50px;
+            border: none !important;
+        }
+
+        .nav-dir{
+            display: none;
+        }
+        border-bottom: solid 2px #1f4685;
+    }
+
+    .ce-chat-engine{
+        margin-left: 0 !important;
+        padding-top: 60px !important;
+    }
+}
+

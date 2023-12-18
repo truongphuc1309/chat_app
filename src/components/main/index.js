@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import './index.scss'
 import NavBar from "./elements/navbar";
@@ -8,9 +8,10 @@ function Main () {
     let user = localStorage.getItem('usr');
     if (!user) 
       window.location.replace('/auth');
+   
     return (
         <>  
-            <NavBar user = {user}/>
+            <NavBar/>
             <ChatEgine user = {user}/>
         </>
     );
