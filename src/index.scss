@@ -1,0 +1,155 @@
+$white-color: #f1f1f1;
+$black-color: #111;
+$subject-color: #4b74b6;
+
+html {
+    font-family:  sans-serif, Arial, Helvetica;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    // height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+*{
+    box-sizing: inherit;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $black-color;
+    font-size: 1.4rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.form-group {
+    width: 100%;
+}
+
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
+
+.my-input{
+    background-color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1.6rem;
+    height: 40px;
+    color: $black-color;
+    padding: 16px 10px;
+    margin: 8px 0;
+    outline: none;
+    border: 2px solid transparent;
+    transition: all 0.2s linear;
+}
+
+.my-input.invalid{
+    border-color: rgb(240, 29, 29);
+}
+
+.my-input:hover,
+.my-input:focus
+{
+    border-color: $subject-color;
+}
+
+
+.password{
+    position: relative;
+}
+
+.password::after{
+    content:"";
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #111;
+}
+
+.btn{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.text-white{
+    color: $white-color !important;
+}
+
+.font-14{
+    font-size: 1.4rem !important;
+}
+
+.font-16{
+    font-size: 1.6rem !important;
+}
+
+.font-24{
+    font-size: 2.4rem !important;
+}
+
+.font-30{
+    font-size: 3rem !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.mb-16{
+    margin-bottom: 16px !important;
+}
+
+@keyframes spin {
+    form{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes toggleIn {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
