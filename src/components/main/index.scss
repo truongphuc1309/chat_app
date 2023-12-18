@@ -248,6 +248,14 @@
                 align-items: center;
                 font-size: 1.8rem;
             }
+
+            
+        }
+
+        .ce-their-message-images img,
+        .ce-my-message-images img{
+            border-radius: 20px !important;
+            border: none !important;
         }
     }
 }
