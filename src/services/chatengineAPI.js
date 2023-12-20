@@ -31,20 +31,40 @@ const ChatEngineApi = {
     },
 
     createOrGetUser : async (username) => {
-        let data =  {
-            username: username,
-            secret: ChatEngineApi.secret,
-        }
-        
-        let config = ChatEngineApi.config('put', data);
-        
-        axios(config)
-        .then(function (response) {
-        })
-        .catch(function (error) {
-          console.log(error);
-        });   
+      let data =  {
+          username: username,
+          secret: ChatEngineApi.secret,
+      }
+      
+      let config = ChatEngineApi.config('put', data);
+      
+      axios(config)
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      });   
     },
+
+    deleteMessage: async (chatId, messId) => {
+      let configuration = {
+        method: 'delete',
+        maxBodyLength: Infinity,
+        url: `https://api.chatengine.io/chats/${chatId}/messages/${messId}/`,
+        headers: { 
+          'Project-ID': '6901fd70-d60e-4679-9122-5758b48eadca', 
+          'User-Name': `${localStorage.getItem('usr')}`, 
+          'User-Secret': '@@@###$$$',
+        },
+      };
+
+      try {
+        await axios(configuration)
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
 }
 
 export default ChatEngineApi;

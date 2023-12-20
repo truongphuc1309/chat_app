@@ -1,12 +1,11 @@
+import { useEffect } from 'react';
 import {MultiChatSocket, MultiChatWindow, useMultiChatLogic} from 'react-chat-engine-advanced';
 
+import customize from '../handlers/customChatengine';
+
 function ChatEgine (props) {
-    window.onload = () => {
-        const sendBtn = document.querySelector('#ce-send-message-button');
-        sendBtn.innerHTML = '<i class="fa-regular fa-paper-plane"></i>';
-        const formChatTitle = document.querySelector('.ce-chat-form-title');
-        formChatTitle.innerHTML = localStorage.getItem('usr');
-    }
+
+    useEffect(customize);
 
     const chatProps = useMultiChatLogic('6901fd70-d60e-4679-9122-5758b48eadca',props.user, '@@@###$$$');
 

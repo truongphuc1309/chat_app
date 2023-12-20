@@ -31,6 +31,8 @@
 
         .navbar-title{
             display: none;
+            font-size: 3.4rem;
+            font-family: fantasy !important;
         }
 
         .logout{
@@ -124,6 +126,7 @@
         margin-bottom: 20px;
 
         .ce-chat-card-title{
+            font-family: Arial, Verdana, Tahoma !important;
             top: 26px !important;
             left: 76px !important;
             font-size: 1.8rem !important;
@@ -140,6 +143,7 @@
         }
 
         .ce-chat-card-subtitle{
+            font-family: Arial, Verdana, Tahoma !important;
             position: absolute;
             left: 76px !important;
             top : 54px !important;
@@ -179,6 +183,7 @@
         }
 
         .ce-message-list{
+            height: calc((100% - 85px) - 84px) !important;
             padding-left: 20px ;
             padding-right: 20px;
             .ce-my-message-timestamp{
@@ -186,6 +191,7 @@
             }
     
             .ce-my-message-body{
+                font-family: Arial, Verdana, Tahoma !important;
                 color: #f1f1f1 !important;
                 background-color: #4b74b6 !important;
                 border-radius: 30px 30px 2px !important;
@@ -197,6 +203,7 @@
             }
     
             .ce-their-message-body{
+                font-family: Arial, Verdana, Tahoma !important;
                 border-radius: 2px 30px 30px !important;
             }
         }
@@ -248,8 +255,6 @@
                 align-items: center;
                 font-size: 1.8rem;
             }
-
-            
         }
 
         .ce-their-message-images img,
@@ -268,87 +273,186 @@
         .ce-chat-settings-title{
             color: $subject-color !important;
         }
+    }
+}
 
-        .ce-dropdown-label{
-            color: $subject-color !important;
-        }
+.ce-chat-settings{
+    color: $subject-color !important;
 
-        .ce-avatar + div{
-            font-size: 1.8rem !important;
-        }
+     .ce-chat-settings-title{
+        color: $black-color !important;
+        font-size: 2.4rem !important;
+        margin-bottom: 20px;
+     }
 
-        .ce-avatar-status{
-            width: 12px !important;
-            height: 12px !important;
-        }
+     .ce-dropdown-children{
+        margin-bottom: 20px !important;
+     }
 
-        .ce-add-member-option{
-            font-family: sans-serif, Arial, Helvetica !important;
-            font-size: 1.6rem;
-            color: #4f4e4e !important;
-        }
+     .ce-autocomplete-input{
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+     }
 
-        .ce-autocomplete-close + div {
-            margin-top: 2px;
-            margin-bottom: 4px;
-            background-color: #d6d5d5;
-            border-radius: 4px;
-        }
+    .ce-default-button{
+        font-size: 2.8rem !important;
+        color: $subject-color !important;
+        border: none !important;
+        background-color: transparent !important;
+        top: 20px !important;
+        right: unset !important;
+        left: 24px !important;
+    }
 
-        .ce-danger-button:hover{
-            background-color: rgb(245, 34, 45) !important;
-            color: $white-color !important;
-        }
+    .ce-dropdown-label{
+        color: $subject-color !important;
+    }
 
-        .ce-autocomplete-close{
-            font-size: 1.6rem;
-            top: 9px !important;
-            right: 18px !important;
-        }
+    .ce-avatar + div{
+        font-size: 1.8rem !important;
+    }
+
+    .ce-avatar-status{
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .ce-add-member-option{
+        font-family: sans-serif, Arial, Helvetica !important;
+        font-size: 1.6rem;
+        color: #4f4e4e !important;
+    }
+
+    .ce-autocomplete-close + div {
+        margin-top: 2px;
+        margin-bottom: 4px;
+        background-color: #d6d5d5;
+        border-radius: 4px;
+    }
+
+    .ce-danger-button:hover{
+        background-color: rgb(245, 34, 45) !important;
+        color: $white-color !important;
+    }
+
+    .ce-autocomplete-close{
+        font-size: 1.6rem;
+        top: 9px !important;
+        right: 18px !important;
     }
 }
 
 .ce-mobile-chat-list-button,
 .ce-mobile-chat-settings-button{
-    top: 84px !important;
+    top: 20px !important;
     font-size: 2.8rem !important;
     color: $white-color !important;
     background-color: transparent !important;
     border: none !important;
 }
 
+.ce-mobile-chat-settings-button{
+    right: 24px !important;
+}
+
+.ce-mobile-chat-list-button{
+    left: 24px !important;
+}
+
 
 @media (max-width: 575px){
-    #root {
-        display: flex;
-        flex-direction: column;
-    }
-    .navbar{
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        height: 60px;
-
-        .logout{
-            height: 50px;
-            width: 50px;
-        }
-
-        .usr-avt{
-            height: 50px;
-            width: 50px;
-            border: none !important;
-        }
-
-        .nav-dir{
-            display: none;
-        }
-        border-bottom: solid 2px #1f4685;
+    .disable {
+        display: none !important;
     }
 
     .ce-chat-engine{
         margin-left: 0 !important;
-        padding-top: 60px !important;
+        // padding-top: 60px !important;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: unset;
+        height: 80px;
+        z-index: 99;
+
+        .navbar-component{
+            .usr-avt{
+                position: absolute;
+                top:50%;
+                left: 40px;
+                transform: translateY(-50%);
+                position: absolute;
+                top:50%;
+                align-self: self-start;
+                height: 56px;
+                width: 56px;
+            }
+
+            .navbar-title{
+                position: absolute;
+                top:50%;
+                left: 50%;
+                letter-spacing: 2px;
+                transform: translate(-50%,-50%);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                display: block;
+            }
+
+
+            .logout{
+                height: 56px;
+                width: 56px;
+                position: absolute;
+                top:50%;
+                right: 40px;
+                transform: translateY(-50%);
+            }
+        }
+
+        .nav-dir{
+            background-color: $subject-color;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            flex-direction: row;
+        }
+    }
+
+    .ce-chat-list {
+
+        .ce-chat-form {
+
+            .ce-chat-form-title{
+                visibility: hidden;
+            }
+            .ce-chat-form-button{
+                position: fixed !important;
+                height: 60px !important;
+                width: 60px !important;
+                top: 80% !important;
+                right: 6% !important;
+            }
+
+            .ce-chat-form-input{
+                top: 80px !important;
+            }
+
+        }
+    }
+    
+
+    .ce-dropdown-children{
+
+        .ce-add-member-option{
+            padding: 20px 12px !important;
+        }
     }
 }
 

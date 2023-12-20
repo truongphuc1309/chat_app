@@ -6,6 +6,9 @@ function NavBar () {
             <div className="navbar-component">
                 <img className="usr-avt" src="https://static-00.iconduck.com/assets.00/chat-icon-2048x2048-i7er18st.png"></img>
             </div>
+            <div className="navbar-component">
+                    <h1 className="navbar-title">Chatty</h1>
+            </div>
             <div className="navbar-component nav-dir">
                 <div className="nav-dir-item chat-dir active">
                     <i className="fa-regular fa-comments"></i>
