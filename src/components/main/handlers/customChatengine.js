@@ -33,7 +33,9 @@ const customize = () => {
                 deleteEmtyMess();
             }else{
                 const emtyMess = lastMess.querySelector('.ce-my-message-body').parentElement;
+                const theirEmtyMess = lastMess.querySelector('.ce-their-message-body').parentElement
                 emtyMess.style.display = 'none';
+                theirEmtyMess.style.display = 'none';
             }
         }
     }
