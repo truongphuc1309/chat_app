@@ -23,9 +23,18 @@ const customize = () => {
     }
     if (lastMessContent)
     {
+        const haveFile = lastMess.querySelector('.ce-my-message-files .ce-message-file');
+        const haveImg = lastMess.querySelector('.ce-my-message-images img');
+        console.log(haveFile);
+        console.log(haveImg);
         if (lastMessContent.innerHTML === ''){
-            lastMess.style.display = 'none';
-            deleteEmtyMess();
+            if(!haveFile && !haveImg){
+                lastMess.style.display = 'none';
+                deleteEmtyMess();
+            }else{
+                const emtyMess = lastMess.querySelector('.ce-my-message-body').parentElement;
+                emtyMess.style.display = 'none';
+            }
         }
     }
 
