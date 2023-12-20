@@ -36,12 +36,14 @@ const customize = () => {
     
         const theirMesses = document.querySelectorAll('.ce-their-message-body');
         for (let theirMess of theirMesses){
-            theirMess.style.display = 'none';
+            if (theirMess.innerHTML === '')
+                theirMess.style.display = 'none';
         }
 
         const myMesses = document.querySelectorAll('.ce-my-message-body');
         for (let myMess of myMesses){
-            myMess.style.display = 'none';
+            if(myMess.innerHTML === '')
+                myMess.style.display = 'none';
         }
 
 
