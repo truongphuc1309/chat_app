@@ -26,8 +26,6 @@ const customize = () => {
         {
             const haveFile = lastMess.querySelector('.ce-my-message-files .ce-message-file');
             const haveImg = lastMess.querySelector('.ce-my-message-images img');
-            console.log(haveFile);
-            console.log(haveImg);
             if (lastMessContent.innerHTML === '' && !haveFile && !haveImg){
                 lastMess.style.display = 'none';
                 deleteEmtyMess();
