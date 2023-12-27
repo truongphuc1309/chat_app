@@ -7,7 +7,7 @@ function ChatEgine (props) {
 
     useEffect(customize);
 
-    const chatProps = useMultiChatLogic('6901fd70-d60e-4679-9122-5758b48eadca',props.user, '@@@###$$$');
+    const chatProps = useMultiChatLogic('bd9a38d7-b457-4e95-94dd-936166d95f2b',props.user, '@@@###$$$');
 
     return (     
         <div style = {{height : '100vh'}}>
