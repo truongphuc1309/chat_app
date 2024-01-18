@@ -8,7 +8,7 @@ const ChatEngineApi = {
             maxBodyLength: Infinity,
             url: 'https://api.chatengine.io/users/',
             headers: { 
-              'PRIVATE-KEY': '871347ac-8b1b-4d7f-8220-fe0cd8bb70b2',
+              'PRIVATE-KEY': 'd9380fd5-1929-4fd6-b282-f5a9f296d71c',
             },
             data : data
         };
@@ -52,7 +52,7 @@ const ChatEngineApi = {
         maxBodyLength: Infinity,
         url: `https://api.chatengine.io/chats/${chatId}/messages/${messId}/`,
         headers: { 
-          'Project-ID': '63b00dfb-0d32-4308-96dc-c5a0b72ef2a5', 
+          'Project-ID': '44a0f3c3-e5ed-4067-ac30-c41eac813737', 
           'User-Name': `${localStorage.getItem('usr')}`, 
           'User-Secret': '@@@###$$$',
         },
